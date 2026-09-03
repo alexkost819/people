@@ -13,12 +13,12 @@ roles:
   type: upper
   jurisdiction: ocd-jurisdiction/country:us/state:az/government
   district: '5'
-- start_date: '2013-01-14'
+- start_date: '2013-01-14'  # https://en.wikipedia.org/wiki/Lela_Alston ; 51st AZ Legislature convened/oath taken Jan 14, 2013 per ARS 41-1101 (https://www.azleg.gov/ars/41/01101.htm)
   end_date: '2018-01-14'
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:az/government
   district: '24'
-- start_date: '2019-01-14'
+- start_date: '2019-01-14'  # https://en.wikipedia.org/wiki/Lela_Alston ; 54th AZ Legislature convened/oath taken Jan 14, 2019 per ARS 41-1101 (https://www.azleg.gov/ars/41/01101.htm)
   end_date: '2023-01-08'
   type: upper
   jurisdiction: ocd-jurisdiction/country:us/state:az/government

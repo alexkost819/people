@@ -12,11 +12,11 @@ roles:
   end_date: '2027-01-04'
   type: governor
   jurisdiction: ocd-jurisdiction/country:us/state:az/government
-- start_date: '2019-01-07'
+- start_date: '2019-01-07'  # https://2019azinauguration.az.gov/inauguration/secretary-state-elect-katie-hobbs ; https://en.wikipedia.org/wiki/Katie_Hobbs (sworn in as AZ SoS at the 2019 statewide inauguration)
   end_date: '2021-12-31'
   type: secretary of state
   jurisdiction: ocd-jurisdiction/country:us/state:az/government
-- start_date: '2013-01-07'
+- start_date: '2013-01-14'  # https://en.wikipedia.org/wiki/51st_Arizona_State_Legislature (1st session convened Jan 14, 2013); per ARS 41-1101 (https://www.azleg.gov/ars/41/01101.htm) members take the oath of office at that same convening assembly, so this is her swearing-in date, not just session-open - her own bio's "Jan 7" is inconsistent with this
   end_date: '2019-01-14'
   type: upper
   jurisdiction: ocd-jurisdiction/country:us/state:az/government
