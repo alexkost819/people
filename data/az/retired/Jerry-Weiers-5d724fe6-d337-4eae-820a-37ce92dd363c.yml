@@ -7,7 +7,7 @@ image: http://www.azleg.gov/alisImages/MemberPhotos/50leg/House/WEIERS_JP.gif
 party:
 - name: Republican
 roles:
-- start_date: '2013-01-15'
+- start_date: '2013-01-15'  # https://en.wikipedia.org/wiki/Jerry_Weiers ; https://ballotpedia.org/Jerry_Weiers (assumed office Jan 15, 2013)
   end_date: '2020-12-31'
   type: mayor
   jurisdiction: ocd-jurisdiction/country:us/state:az/place:glendale/government

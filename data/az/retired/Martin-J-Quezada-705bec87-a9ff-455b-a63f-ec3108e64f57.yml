@@ -19,7 +19,7 @@ roles:
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:az/government
   district: '13'
-- start_date: '2015-01-12'
+- start_date: '2015-01-12'  # https://en.wikipedia.org/wiki/52nd_Arizona_State_Legislature ; 1st session convened/oath taken Jan 12, 2015 per ARS 41-1101 (https://www.azleg.gov/ars/41/01101.htm) - his own bio's "Jan 5" is inconsistent with this
   end_date: '2023-01-08'
   type: upper
   jurisdiction: ocd-jurisdiction/country:us/state:az/government

@@ -8,7 +8,7 @@ roles:
   end_date: '2020-12-31'
   type: mayor
   jurisdiction: ocd-jurisdiction/country:us/state:az/place:mesa/government
-- start_date: '2021-01-05'
+- start_date: '2021-01-05'  # UNCONFIRMED exact day: sources (https://en.wikipedia.org/wiki/John_Giles_(mayor), https://ballotpedia.org/John_Giles) only say his 2nd full term began "January 2021"; date inferred from Mesa's typical first-Tuesday-of-January installation pattern (confirmed for the Jan 7, 2025 ceremony) - verify if precision matters
   end_date: 2024-12-31
   type: mayor
   jurisdiction: ocd-jurisdiction/country:us/state:az/place:mesa/government
