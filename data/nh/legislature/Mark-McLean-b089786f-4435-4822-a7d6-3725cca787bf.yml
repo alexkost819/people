@@ -16,7 +16,7 @@ roles:
   end_date: 2022-12-06
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:nh/government
-  district: Hillsborough 15
+  district: Hillsborough 44
 - start_date: 2014-12-03
   end_date: 2016-12-06
   type: lower
@@ -27,10 +27,6 @@ roles:
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:nh/government
   district: Hillsborough 15
-- end_date: 2022-12-07
-  type: lower
-  jurisdiction: ocd-jurisdiction/country:us/state:nh/government
-  district: Hillsborough 44
 offices:
 - classification: capitol
   address: State House 107 N. Main St., Concord, NH 03301
