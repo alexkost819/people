@@ -84,8 +84,29 @@ jobs:
     - name: check role date integrity selectively
       env:
         ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
       run: |
-        uv run python .github/scripts/check_role_dates.py --changed-files ${ALL_CHANGED_FILES}
+        # Report only what this change introduced. Every finding describes a bot
+        # mistake being made, so a long-standing one in a file the change merely
+        # reformats is not this author's to fix - see check_role_dates.py's
+        # module docstring. Without a usable base the check reports everything,
+        # which is noisy but never misses a real problem.
+        base_args=()
+        empty_sha=0000000000000000000000000000000000000000
+        if [[ -n "${BASE_SHA}" && "${BASE_SHA}" != "${empty_sha}" ]]; then
+          # actions/checkout clones at depth 1, so the base commit is usually
+          # absent locally; fetch just that one commit.
+          git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null \
+            || git fetch --no-tags --depth=1 origin "${BASE_SHA}" \
+            || true
+          if git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
+            base_args=(--base-ref "${BASE_SHA}")
+          else
+            echo "base ${BASE_SHA} unavailable: reporting all findings"
+          fi
+        fi
+        uv run python .github/scripts/check_role_dates.py \
+          --changed-files ${ALL_CHANGED_FILES} "${base_args[@]}"
     - name: lint committees selectively
       env:
         OS_PEOPLE_DIRECTORY: ${{ env.GITHUB_WORKSPACE }}
