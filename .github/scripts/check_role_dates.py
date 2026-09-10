@@ -221,14 +221,20 @@ def find_shared_end_dates(
 
     Even within one change, a date already on file for both people is not a batch
     date this change invented; --base-ref filters those out (see module docstring).
+
+    Placeholder end_dates are skipped: data/us uses 2100-01-01 to mean "no known
+    end", so every congressional file added shares it, and none of them describes
+    a resignation at all.
     """
+    # ~10 years out, in days so a leap day can't make this raise.
+    horizon = str(datetime.date.today() + datetime.timedelta(days=3653))
     by_date: dict[str, dict[str, tuple[str, Path]]] = defaultdict(dict)
     for path, record in records.items():
         person = str(record.get("id") or path)
         name = _person_name(record)
         for role in record.get("roles") or []:
             end = role.get("end_date")
-            if end:
+            if end and str(end) < horizon:
                 by_date[str(end)][person] = (name, path)
     return {
         date: sorted(people.values(), key=lambda entry: str(entry[1]))
