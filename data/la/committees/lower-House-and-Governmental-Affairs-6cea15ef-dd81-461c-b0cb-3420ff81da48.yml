@@ -50,9 +50,6 @@ members:
 - name: Les Farnum
   role: member
   person_id: ocd-person/81379952-373b-4e6e-a29f-b9bb60e7593b
-- name: Mark Wright
-  role: member
-  person_id: ocd-person/d3ecec03-0408-46f0-8c82-b775f787e6e1
 - name: Mike Johnson
   role: member
   person_id: ocd-person/0e901294-3718-49df-9922-0ac4503acee2

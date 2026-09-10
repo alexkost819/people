@@ -17,15 +17,15 @@ members:
 - name: Ferrell Haile
   role: chair
   person_id: ocd-person/f539ae98-f5d7-4290-9835-f64a1ab0a8c7
-- name: John Stevens
-  role: vice chair
-  person_id: ocd-person/cb6c477c-ceb7-41af-ab96-b03debc1b7e3
 - name: Bill Powers
   role: member
   person_id: ocd-person/46b6a1b2-f0c0-4e9a-a506-a81e12e329f5
 - name: Jack Johnson
   role: member
   person_id: ocd-person/83e732c5-55af-4d56-b3ed-9ff358ed641e
+- name: John Stevens
+  role: member
+  person_id: ocd-person/cb6c477c-ceb7-41af-ab96-b03debc1b7e3
 - name: Raumesh Akbari
   role: member
   person_id: ocd-person/9c949092-7bff-4859-bea7-46d9c37ed513
