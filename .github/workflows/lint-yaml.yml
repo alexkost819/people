@@ -76,16 +76,44 @@ jobs:
             uv run os-people lint "${abbrs[@]}"
           fi
         fi
+    - name: resolve base revision
+      id: base
+      env:
+        BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+      run: |
+        # The two checks below report only what this change introduced. Both
+        # describe a bot mistake being made, so a long-standing one in a file
+        # the change merely reformats is not this author's to fix - see
+        # check_role_dates.py's module docstring. Without a usable base they
+        # report everything, which is noisy but never misses a real problem.
+        empty_sha=0000000000000000000000000000000000000000
+        if [[ -n "${BASE_SHA}" && "${BASE_SHA}" != "${empty_sha}" ]]; then
+          # actions/checkout clones at depth 1, so the base commit is usually
+          # absent locally; fetch just that one commit.
+          git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null \
+            || git fetch --no-tags --depth=1 origin "${BASE_SHA}" \
+            || true
+          if git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
+            echo "base-args=--base-ref ${BASE_SHA}" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+          echo "base ${BASE_SHA} unavailable: reporting all findings"
+        fi
+        echo "base-args=" >> "${GITHUB_OUTPUT}"
     - name: check duplicate people selectively
       env:
         ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        BASE_ARGS: ${{ steps.base.outputs.base-args }}
       run: |
-        uv run python .github/scripts/check_duplicate_people.py --changed-files ${ALL_CHANGED_FILES}
+        uv run python .github/scripts/check_duplicate_people.py \
+          --changed-files ${ALL_CHANGED_FILES} ${BASE_ARGS}
     - name: check role date integrity selectively
       env:
         ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        BASE_ARGS: ${{ steps.base.outputs.base-args }}
       run: |
-        uv run python .github/scripts/check_role_dates.py --changed-files ${ALL_CHANGED_FILES}
+        uv run python .github/scripts/check_role_dates.py \
+          --changed-files ${ALL_CHANGED_FILES} ${BASE_ARGS}
     - name: lint committees selectively
       env:
         OS_PEOPLE_DIRECTORY: ${{ env.GITHUB_WORKSPACE }}
