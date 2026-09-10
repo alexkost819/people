@@ -16,9 +16,7 @@ offices:
 - classification: capitol
   address: Room 633, Legislative Office Building, Albany, NY 12248
   voice: 518-455-4561
-- classification: district
-  address: 98-09 Northern Blvd., Corona, NY 11368
-  voice: 718-457-3615
+  fax: 518-455-4565
 links:
 - url: https://nyassembly.gov/mem/Larinda-C-Hooks
 other_names:

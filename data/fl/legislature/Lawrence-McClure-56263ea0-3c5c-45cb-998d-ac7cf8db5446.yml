@@ -13,8 +13,8 @@ roles:
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:fl/government
   district: '68'
-- start_date: '2018-01-09'
-  end_date: '2023-02-10'
+- start_date: 2018-01-09
+  end_date: 2023-02-10
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:fl/government
   district: '58'
@@ -30,7 +30,6 @@ links:
   note: member detail page
 - url: https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4686
 - url: https://www.myfloridahouse.gov/Sections/Representatives/details.aspx?MemberId=4686
-- url: http://www.myfloridahouse.gov/Sections/Representatives/details.aspx?MemberId=4686&LegislativeTermId=88
 - url: https://www.myfloridahouse.gov/Sections/Representatives/details.aspx?MemberId=4686&LegislativeTermId=88
 other_names:
 - name: L. McClure
@@ -45,8 +44,7 @@ sources:
 - url: https://myfloridahouse.gov/Sections/Representatives/details.aspx?MemberId=4686&LegislativeTermId=90
   note: member detail page
 - url: https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4686
-- url: https://www.myfloridahouse.gov/Sections/Representatives/details.aspx?MemberId=4686
-- url: http://www.myfloridahouse.gov/Sections/Representatives/details.aspx?MemberId=4686&LegislativeTermId=88
-- url: http://www.myfloridahouse.gov/Sections/Representatives/representatives.aspx
 - url: https://www.myfloridahouse.gov/Representatives
+- url: https://www.myfloridahouse.gov/Sections/Representatives/details.aspx?MemberId=4686
 - url: https://www.myfloridahouse.gov/Sections/Representatives/details.aspx?MemberId=4686&LegislativeTermId=88
+- url: https://www.myfloridahouse.gov/Sections/Representatives/representatives.aspx

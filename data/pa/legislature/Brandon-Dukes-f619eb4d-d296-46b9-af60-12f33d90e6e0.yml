@@ -3,16 +3,25 @@ name: Brandon Dukes
 given_name: Brandon
 family_name: Dukes
 gender: Male
+email: repdukes@pahouse.net
 image: https://www.pahouse.com/imageHandler/top/125/175/755deff6-049c-f111-afcc-b489d332d98e
 party:
 - name: Democratic
 roles:
-- type: lower
+- start_date: 2026-08-18
+  type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:pa/government
   district: '12'
-  start_date: 2026-08-18
+offices:
+- classification: capitol
+  address: Room 223, Irvis Office Building P.O. Box 202012, Harrisburg, PA 17120
+  voice: 717-783-4303
+- classification: district
+  address: 2525 Rochester Road Suite 201, Cranberry Township, PA 16066
+  voice: 724-824-8671
 links:
 - url: https://www.pahouse.com/dukes/
+- url: https://www.palegis.us/house/members/bio/2067/rep-dukes
 other_names:
 - name: B. Dukes
 - name: B.M. Dukes
@@ -21,3 +30,4 @@ sources:
 - url: https://ballotpedia.org/Brandon_Dukes
 - url: https://en.wikipedia.org/wiki/Brandon_Dukes
 - url: https://www.pahouse.com/dukes
+- url: https://www.palegis.us/house/members/bio/2067/rep-dukes

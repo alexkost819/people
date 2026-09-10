@@ -12,8 +12,8 @@ roles:
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:ga/government
   district: '48'
-- start_date: '2017-01-09'
-  end_date: '2018-12-31'
+- start_date: 2017-01-09
+  end_date: 2018-12-31
   type: lower
   jurisdiction: ocd-jurisdiction/country:us/state:ga/government
   district: '95'
@@ -42,14 +42,14 @@ sources:
 - url: https://en.wikipedia.org/wiki/Scott_Hilton_(politician)
 - url: https://justfacts.votesmart.org/candidate/biography/168350/scott-hilton
 - url: https://scotthiltonga.com/meet-scott.html
+- url: https://webservices.legis.ga.gov/GGAServices/Members/Service.svc?wsdl
+- url: https://www.house.ga.gov/Representatives/en-US/member.aspx?Member=4899&Session=25
 - url: https://www.legis.ga.gov/api/members/detail/4899?session=1031&chamber=1
   note: API member detail (requires authorization token)
 - url: https://www.legis.ga.gov/api/members/list/1031
   note: API members list (requires authorization token)
 - url: https://www.legis.ga.gov/members/house/4899
 - url: https://www.linkedin.com/in/scottchilton
-- url: http://www.house.ga.gov/Representatives/en-US/member.aspx?Member=4899&Session=25
-- url: http://webservices.legis.ga.gov/GGAServices/Members/Service.svc?wsdl
 extras:
   residence: Peachtree Corners
   city: Peachtree Corners
