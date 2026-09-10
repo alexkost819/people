@@ -3,7 +3,7 @@ name: Jessica Dixon Heitman
 given_name: Jessica
 family_name: Dixon Heitman
 gender: Female
-email: repjessicadixonheitman@gmail.com
+email: repdixonheitman@repjdh.com
 image: https://www.chicagotribune.com/wp-content/uploads/2026/07/ctc-l-Dixon-Heitman_264932049_246515.jpg?w=1392
 party:
 - name: Democratic
@@ -14,7 +14,11 @@ roles:
   district: '97'
 offices:
 - classification: capitol
-  address: Springfield, IL 62706
+  address: Room 247-E, Stratton Office Building, Springfield, IL 62706
+  voice: 217-782-1331
+- classification: district
+  address: 24047 Lockport St., Plainfield, IL 60544
+  voice: 815-254-0000
 links:
 - url: https://www.ilga.gov/House/Members/Details/3465
 other_names:
@@ -29,6 +33,7 @@ other_names:
 - name: J.S.D. Heitman
 - name: Jess Heitman
 sources:
+- url: https://ballotpedia.org/Jessica_Dixon_Heitman
 - url: https://en.wikipedia.org/wiki/Jessica_Dixon_Heitman
 - url: https://www.ilga.gov/House/Members/Details/3465
 - url: https://www.linkedin.com/in/jessica-dixon-heitman-417023188
